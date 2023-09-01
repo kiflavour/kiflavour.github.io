@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+const posts = await Astro.glob('../posts/*.md')
+const name = 'Nicki Minaj Sexy Pics';
+---
+
+<Layout title={name} description="this is my desc">
+
+    <h1>{name}</h1>
+    <div id="image-container">
+    </div>
+
+</Layout>
+
+<style>
+    h1 {
+        text-align: center;
+    }
+</style>
+
+
+<script>
+
+    // set the subreddit name
+const subreddit = 'Nicki_Minaj';
+
+    // fetch the JSON data for the subreddit
+fetch(`https://www.reddit.com/r/${subreddit}/.json`).then(response => response.json()).then(json => {
+
+    console.log(json)
+    // json console.log happi. You get all the listing.data.children.
+    // what does filter do?
+    const imagePosts = json.data.children.filter(post => {
+    const postUrl = post.data.url;
+
+
+    // until here: all the img urls from one different subreddit
+    // console.log(postUrl)
+
+    // check if the post URL ends in a common image file extension
+      return postUrl.endsWith('.jpg') || postUrl.endsWith('.jpeg') || postUrl.endsWith('.png') || postUrl.endsWith('.gif');
+    });
+
+    // extract the image URLs from the image posts
+    const imageUrls = imagePosts.map(post => post.data.url);
+
+    // display the images on the page
+    const imageContainer = document.querySelector('#image-container');
+    imageUrls.forEach(url => {
+      const img = document.createElement('img');
+      img.src = url;
+      img.classList.add("images_nicki");
+      imageContainer.appendChild(img);
+    });
+  })
+  .catch(error => {
+    console.error(error);
+  });
+
+
+
+      // fetch the JSON data for the subreddit
+      fetch(`https://www.reddit.com/r/aww/.json`)
+  .then(response => response.json())
+  .then(json => {
+    console.log(json.data.children[0].data.url);
+  }); // This is where the semicolon should be
+
+</script>
+
+
