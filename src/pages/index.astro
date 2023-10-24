@@ -1,71 +1,42 @@
 ---
-import Layout from '../layouts/Layout.astro';
-const posts = await Astro.glob('../posts/*.md')
-const name = 'Nicki Minaj Sexy Pics';
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import Hero from '../components/Hero.astro'
+import Courses from '../components/Courses.astro'
+import '../styles/global.css'
 ---
 
-<Layout title={name} description="this is my desc">
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+		<meta name="generator" content={Astro.generator} />
+		<title>KI Beratung Deutschland - KI Flavour</title>
+	</head>
+	<body>
+		<Header/>
+		<Hero/>
 
-    <h1>{name}</h1>
-    <div id="image-container">
-    </div>
+		<Courses/>
 
-</Layout>
+		<div class="wrapper">
 
-<style>
-    h1 {
-        text-align: center;
-    }
-</style>
+		<h2>Python Programmierer</h2>
 
+		<p>Übrigens, es geht nicht nur um die Oberfläche. Als erfahrener Python-Programmierer habe ich auch die technische Tiefe, um in die Kernaspekte von KI-Anwendungen einzutauchen. Das bedeutet, ich kenne mich nicht nur mit den schillernden Endprodukten aus, sondern auch mit dem, was unter der Haube passiert. Machine Learning, Datenanalyse, Algorithmenentwicklung - das sind alles Bereiche, in denen ich mich wohlfühle. Wenn du also jemanden suchst, der sowohl das Große Ganze als auch die feinen Details versteht, bin ich definitiv dein Mann!</p>
 
-<script>
+		</div>
 
-    // set the subreddit name
-const subreddit = 'Nicki_Minaj';
-
-    // fetch the JSON data for the subreddit
-fetch(`https://www.reddit.com/r/${subreddit}/.json`).then(response => response.json()).then(json => {
-
-    console.log(json)
-    // json console.log happi. You get all the listing.data.children.
-    // what does filter do?
-    const imagePosts = json.data.children.filter(post => {
-    const postUrl = post.data.url;
-
-
-    // until here: all the img urls from one different subreddit
-    // console.log(postUrl)
-
-    // check if the post URL ends in a common image file extension
-      return postUrl.endsWith('.jpg') || postUrl.endsWith('.jpeg') || postUrl.endsWith('.png') || postUrl.endsWith('.gif');
-    });
-
-    // extract the image URLs from the image posts
-    const imageUrls = imagePosts.map(post => post.data.url);
-
-    // display the images on the page
-    const imageContainer = document.querySelector('#image-container');
-    imageUrls.forEach(url => {
-      const img = document.createElement('img');
-      img.src = url;
-      img.classList.add("images_nicki");
-      imageContainer.appendChild(img);
-    });
-  })
-  .catch(error => {
-    console.error(error);
-  });
+	
 
 
 
-      // fetch the JSON data for the subreddit
-      fetch(`https://www.reddit.com/r/aww/.json`)
-  .then(response => response.json())
-  .then(json => {
-    console.log(json.data.children[0].data.url);
-  }); // This is where the semicolon should be
+		
+	<Footer/>
+	</body>
+</html>
 
-</script>
 
 
