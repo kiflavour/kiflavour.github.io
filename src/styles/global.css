@@ -20,9 +20,9 @@ h3 {
   font-size: 1.2em; }
 
 p {
-  color: #454545;
-  font-size: 1em;
-  line-height: 1.7em; }
+  font-size: 18px;
+  line-height: 32px;
+}
 
 img {
   max-width: 100%; }
@@ -40,6 +40,8 @@ img {
 
 h1 {
   font-size: 64px;
+  margin: 0;
+  margin-top: 12px;
 }
 
 h2 {
@@ -444,4 +446,11 @@ nav ul {
   src: url("/fonts/Montserrat-SemiBold.ttf");
   font-weight: 600;
   font-display: swap
+}
+
+
+.wrapper {
+  max-width: 90%;
+  width: 750px;
+  margin: 0 auto;
 }
