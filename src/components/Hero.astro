@@ -1,115 +1,140 @@
 ---
-import Button from '../components/Button.astro'
-const Keyword = "KI Beratung Deutschland"
+const Keyword = "KI Freelancer & Support Deutschland"
 ---
 
-<section class="hero">
-
-    <svg id="path_1" xmlns="http://www.w3.org/2000/svg" width="363.552" height="376.373" viewBox="0 0 363.552 376.373">
-        <path id="Path_12" data-name="Path 12" d="M181.776-93.5C363.456-98.82,363.552-1.33,363.552,68.481s-57.823,151.1-174.481,200.452c-64.42,19.112-86.9,21-133.673-11.938C5.994,215.678,0,111.484,0,68.481,0-1.33.1-88.179,181.776-93.5Z" transform="translate(0 93.708)" fill="#fef7f2"></path>
-     </svg>
 
 
+<section id="homepage-hero">
+	<div class="homepage-wrapper">
 
-    <div class="wrapper">
+	<div class="hero_left">
 
+		<p class="site-description-up">IHR FREELANCER AI SERVICE</p>
+		<h1 class="site-description-down">{Keyword}</h1>
 
-        <div class="hero_image">
-            <img src="/images/ki-beratung-deutschland.svg" alt={Keyword}" width="300px">
-        </div>
-
+		<p class="site-description-bottom">
+      KI verändert bereits die Welt. Möchten Sie KI Anwendungen in ihr Unternehmen integrieren oder interessieren sich für die neusten KI Themen, dann sind sie hier richtig. Ob Chat GPT oder Stable Diffusion, wir helfen Ihnen weiter.
+		</p>
 
 
 
-    <div class="hero_text">
-        <h1>🤖 KI Freelancer & Support <span>Deutschland</span></h1>
-            <p>KI verändert bereits die Welt. Möchten Sie KI Anwendungen in ihr Unternehmen integrieren oder interessieren sich für die neusten KI Themen, dann sind sie hier richtig. Ob Chat GPT oder Stable Diffusion, wir helfen Ihnen weiter.</p>
-            <a href="#contact">
-            <Button bgColor="red"  buttontext="Kontaktiere Uns"/>
-            </a>
-    </div>
-
-    
+		<a id="hrefkon"><button id="kontaktbutton">Kontaktiere Mich <span class="yellow">→</span></button></a>
+	</div>
 
 
+	<div class="hero_right">
+		<img src="/images/ki-beratung-deutschland.svg" alt=`${Keyword}` width="300px">
+	</div>
 
-</div>
+
+	</div>
 </section>
 
+
+
 <style>
-    .hero {
-        padding: 48px 0;
-        margin-bottom: 100px;
-        position: relative;
-        overflow: hidden;
+
+
+
+#homepage-hero {
+    padding: 20px 0;
+    padding-top: 0;
+    background-color: #f6f5f2;
+  }  
+
+
+
+  .homepage-wrapper {
+    width: 1100px;
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: left;
+    color: #08081b;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 16px;
+    box-sizing: border-box; }
+
+.site-description-up {
+    letter-spacing: 0.10em;
+    font-size: 15px;
+    margin-bottom: 0em; 
+    color: #666461;
+}
+
+.site-description-down {
+    font-weight: 800;
+    color: #232323;
+    font-size: 52px;
+    line-height: 58px;
+    margin-top: 0;
+    margin-bottom: 0em; 
+    padding-top: .3em;
+    padding-bottom: .3em;
+}
+
+.site-description-bottom {
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #666461;
+}
+
+#hrefkon {
+  display: block;
+    margin-top: 24px;}
+  
+  #kontaktbutton {
+    padding: 16px 22px;
+    border: none;
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: 800;
+    cursor: pointer;
+    color: #232323;
+    background-color: white;
+    border: 3px solid #232323;
+  }
+  
+
+  .hero_right {
+    margin-top: 18px;
+  }
+
+
+
+@media only screen and (min-width: 610px) { 
+
+
+  .homepage-wrapper { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hero_right {
+    width: 650px;
+  }
+
+   .site-description-down {
+        font-size: 82px;
+        line-height: 88px;
+        padding-bottom: 8px;
+        padding-top: 8px;
     }
 
-
-    span {
-        color: #f5be51;
-    }
-
-    h1 {
-        margin: 0;
-        padding: 0;
-    }
-
-    p {
-        max-width: 90%;
-    }
-
-    .hero_image {
-        margin-top: 48px;
-    }
+    #homepage-hero {
+        padding: 70px 0;
+      }  
 
 
-    #path_1 {
-    position: absolute;
-    z-index: -1;
-    right: -100px;
-    width: 250px;
-    top: 50px;
 }
 
 
-    @media only screen and (min-width: 850px) {  
 
 
 
-    .hero {
-        padding: 64px 0;
-    }
 
-    .hero .wrapper {
-        width: 1140px;
-    }
-
-    .wrapper {
-        display: grid;
-        grid-template-columns: 60% 40%;
-
-    }
-
- 
-
-    .hero_image  {
-        text-align: center;
-        margin-top: 0;
-        order: 1;
-    }
-
-
-
-    .hero h1 {
-        font-size: 68px;
-        line-height: 76px;
-    }
-
-    p {
-        margin-top: 12px;
-        max-width: 70%;
-        margin-bottom: 48px;
-    }
-
-    }
 </style>

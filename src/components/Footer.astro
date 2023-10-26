@@ -3,278 +3,42 @@ import Button from '../components/Button.astro'
 ---
 
 
+
 <footer>
-
-
-    <div class="wrapper">
-
-      
+  <p>© 2023 KI Freelancer - All Rights Reserved.</p>
+  
+  <div class="footer-unten">
+  <a href="/">Impressum</a>
+  <a href="/">Datenschutz</a>
+  </div>
   
   
-      <div class="footer_top">
-  
-        
-  
-          <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true" action="/thankyou">
-            <p>
-                    <label>Name: <input type="text" name="name" /></label>   
-                  </p>
-        <p>
-          <label>Email: <input type="text" name="name" /></label>
-        </p>
-        <p>
-          <label>Nachricht: <textarea name="message" rows="8" required></textarea></label>
-        </p>
-        <div data-netlify-recaptcha="true"></div>
-        <p>
-          <button type="submit">Senden</button>
-        </p>
-        </form>
-  
-  
-  
-         <h2>Willkommen bei meiner KI Beratung!</h2>
-  
-          <div class="upside_wrapper">
-
-            <p>Hallo </p>
-  
-        <div class="upside-right">
-          
-        
-  
-        </div> <!-- upside-right -->
-  
-      </div> <!-- upside wrapper -->
-  
-  
-      </div> <!-- footer_top -->
-  
-    </footer>
-  
-  
-      <div class="footer_down">
-  
-        <div class="downside_wrapper">
-      
-          <div class="downside_links">
-  
-  
-            
-            <ul>
-            <h3>Über Mich</h3>  
-
-            </ul>
-  
-  
-  
-       
-    
-  
-            
-  
-          </div> <!-- downside_link -->
-  
-  
-        </div><!-- downside-wrapper -->
-  
-        
-        
-  
-      </div> <!-- downside -->
-  
-      <div class="information">
-        <p>© 2023 KI Flavour - All Rights Reserved</p>
-        
-      </div>
-      
-      
+  </footer>
   
   
 
 <style>
 
-
 footer {
-  margin-top: 115px;
-  background-color: #fef7f2;
-}
+    border-top: 3px solid #232323;
+    background-color: #f6f5f2;
+    text-align: center;
+    padding: 16px 0; }
 
-footer a {
-  color: #944f38;
-}
+    footer p {
+    color: #232323; }
 
-footer strong { 
-  color: $first_black;
-}
-
-.footers_titles h3 {
-  margin: 0;
-}
-
-
-.downside_links h3 {
-  padding-bottom: 4px;
-  margin: 0;
-}
-
-.downside_links a li {
-  font-size: 18px;
-  padding: 4px 0;
-  color: #616e7c;
-  transition: color 200ms ease;
-}
-
-
-.downside_links a li:hover { 
-  color: #fe7543;
-}
-
-
-
-.downside_links a {
-  text-decoration: none;
-}
-
-
-.footer_top {
-  position: relative;
-  padding: 64px 16px;
-  text-align: center;
-}
-
-.footer_top button {
-  margin: 0;
-  background-image: none;
-  background-color: #fff;
-  color: #1f2933;
-  font-size: 14.4px;
-  letter-spacing: 1.35px;
-  text-transform: uppercase;
-  box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-}
-
-
-.footer_top {
-  color: #1f2933;
-  line-height: 28px;
-}
-
-
-.upside_wrapper p {
-  width: 700px;
-  max-width: 100%;
-  margin: 12px auto;
-}
-
-
-
-
-
-.footer_down {
-  padding: 0px 0;
-  width: 920px;
-  margin: 0 auto;
-  max-width: 90%;
-  text-align: center;
-}
-
-.downside-right ul {
-  line-height: 32px;
-}
-
-
-
-.footer_down ul {
-  padding-left: 0;
-  list-style: none;
-}
+    footer a {
+    color: #232323;
+    text-decoration: none;
+    padding-left: 1em; }
   
-
-.undertag {
-  color: #616e7c;
-}
-
-
-.information {
-  text-align: center;
-  padding-top: 24px;
-}
-
-  
-.social {
-  padding: 16px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-
-
-  
-  #shapef2 {
-    border-radius: 50%;
-    box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.3);
-    margin-top: -11rem;
-  }
-  
-  
-
-
-  
-.information p {
-  color: #616e7c;
-}
-
-
-
-  
-  .social-img-footer {
-      width: 42px;
-      color: #de8b5e;
-      display: block;
-      margin: 8px;
-  }
-  
-  
-
-
-
-  @media only screen and (min-width: 850px) {  
-
+  @media only screen and (max-width: 669px) {
     footer {
-      margin-top: 128px; 
-    }
-
-
-
-    .footer_down {
-      text-align: left;
-      margin-top: 32px;
-    }
-
-    .downside_links a li {
-      font-size: 18px;
-      padding: 0px 0;
-    }
-    
-  .downside_links {
-    display: flex;
-    justify-content: space-between;
-    line-height: 32px;
-    width: 800px;
-    max-width: 90%;
-    margin: 0 auto;
-  }
-
-  .downside_links a { 
-    color: #555;
-    font-size: 16px;
-  }
+      padding: 2em;
+} }
   
-}
+
 </style>
 
   
